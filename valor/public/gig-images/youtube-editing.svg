@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="40" cy="260" r="90" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="370" cy="40" r="70" fill="rgba(255,255,255,0.05)"/>
+  <!-- Video player frame -->
+  <rect x="60" y="50" width="280" height="158" rx="10" fill="#0f0f0f" fill-opacity="0.7"/>
+  <!-- Video content bg -->
+  <rect x="66" y="56" width="268" height="146" rx="7" fill="#1a1a2e" fill-opacity="0.9"/>
+  <!-- Play button -->
+  <circle cx="200" cy="129" r="32" fill="white" fill-opacity="0.15"/>
+  <circle cx="200" cy="129" r="26" fill="#ff0000" fill-opacity="0.85"/>
+  <polygon points="194,119 194,139 216,129" fill="white"/>
+  <!-- YouTube logo bar -->
+  <rect x="66" y="56" width="268" height="22" rx="7" fill="#111" fill-opacity="0.8"/>
+  <rect x="66" y="66" width="268" height="12" fill="#111" fill-opacity="0.8"/>
+  <rect x="74" y="60" width="60" height="12" rx="6" fill="#ff0000" fill-opacity="0.9"/>
+  <text x="104" y="70" text-anchor="middle" font-size="8" font-weight="bold" fill="white">YouTube</text>
+  <!-- Timeline editor -->
+  <rect x="60" y="218" width="280" height="58" rx="8" fill="black" fill-opacity="0.3"/>
+  <!-- Timeline track 1 -->
+  <rect x="68" y="228" width="264" height="12" rx="4" fill="white" fill-opacity="0.1"/>
+  <rect x="68" y="228" width="90" height="12" rx="4" fill="#a855f7" fill-opacity="0.8"/>
+  <rect x="164" y="228" width="70" height="12" rx="4" fill="#ec4899" fill-opacity="0.7"/>
+  <rect x="240" y="228" width="50" height="12" rx="4" fill="#a855f7" fill-opacity="0.6"/>
+  <!-- Timeline track 2 -->
+  <rect x="68" y="245" width="264" height="8" rx="4" fill="white" fill-opacity="0.1"/>
+  <rect x="68" y="245" width="120" height="8" rx="4" fill="#34d399" fill-opacity="0.6"/>
+  <rect x="196" y="245" width="80" height="8" rx="4" fill="#34d399" fill-opacity="0.4"/>
+  <!-- Playhead -->
+  <rect x="175" y="222" width="2" height="36" fill="white" fill-opacity="0.9"/>
+  <polygon points="172,222 178,222 175,228" fill="white" fill-opacity="0.9"/>
+  <!-- Progress bar below video -->
+  <rect x="66" y="193" width="268" height="4" rx="2" fill="white" fill-opacity="0.15"/>
+  <rect x="66" y="193" width="140" height="4" rx="2" fill="#ff0000" fill-opacity="0.8"/>
+  <circle cx="206" cy="195" r="5" fill="white"/>
+</svg>

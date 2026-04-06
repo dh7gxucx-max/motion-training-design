@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.35)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.55)"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Decorative blobs -->
+  <circle cx="380" cy="20" r="90" fill="rgba(255,255,255,0.07)"/>
+  <circle cx="20" cy="280" r="110" fill="rgba(255,255,255,0.05)"/>
+
+  <!-- Film strip top border -->
+  <rect x="0" y="0" width="400" height="38" fill="rgba(0,0,0,0.3)"/>
+  <rect x="0" y="262" width="400" height="38" fill="rgba(0,0,0,0.3)"/>
+  <!-- Film sprocket holes top -->
+  <rect x="14" y="8" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="56" y="8" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="98" y="8" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="140" y="8" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="182" y="8" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="224" y="8" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="266" y="8" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="308" y="8" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="350" y="8" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <!-- Film sprocket holes bottom -->
+  <rect x="14" y="270" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="56" y="270" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="98" y="270" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="140" y="270" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="182" y="270" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="224" y="270" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="266" y="270" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="308" y="270" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <rect x="350" y="270" width="22" height="22" rx="4" fill="rgba(255,255,255,0.15)"/>
+
+  <!-- Play button outer glow -->
+  <circle cx="200" cy="150" r="78" fill="rgba(255,255,255,0.08)"/>
+  <!-- Play button ring -->
+  <circle cx="200" cy="150" r="66" fill="rgba(0,0,0,0.25)" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"/>
+  <!-- Play button fill -->
+  <circle cx="200" cy="150" r="55" fill="rgba(255,255,255,0.18)"/>
+  <!-- Play triangle -->
+  <polygon points="184,124 184,176 236,150" fill="white" fill-opacity="0.92"/>
+
+  <!-- Progress bar at bottom of screen area -->
+  <rect x="90" y="228" width="220" height="5" rx="2.5" fill="rgba(255,255,255,0.15)"/>
+  <rect x="90" y="228" width="95" height="5" rx="2.5" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="185" cy="230.5" r="6" fill="white" fill-opacity="0.9"/>
+
+  <!-- Time stamps -->
+  <text x="90" y="248" fill="rgba(255,255,255,0.5)" font-size="10" font-family="sans-serif">0:42</text>
+  <text x="310" y="248" fill="rgba(255,255,255,0.5)" font-size="10" font-family="sans-serif" text-anchor="end">2:15</text>
+</svg>

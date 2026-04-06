@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="50" cy="60" r="80" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="360" cy="250" r="90" fill="rgba(255,255,255,0.05)"/>
+  <!-- Film strip -->
+  <rect x="48" y="88" width="304" height="125" rx="6" fill="#1a1a2e" fill-opacity="0.7"/>
+  <!-- Perforations top -->
+  <rect x="60" y="92" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="88" y="92" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="116" y="92" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="144" y="92" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="172" y="92" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="200" y="92" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="228" y="92" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="256" y="92" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="284" y="92" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="312" y="92" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <!-- Perforations bottom -->
+  <rect x="60" y="196" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="88" y="196" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="116" y="196" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="144" y="196" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="172" y="196" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="200" y="196" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="228" y="196" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="256" y="196" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="284" y="196" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <rect x="312" y="196" width="16" height="12" rx="3" fill="white" fill-opacity="0.25"/>
+  <!-- Frame 1 -->
+  <rect x="56" y="108" width="76" height="80" rx="4" fill="#fce7f3"/>
+  <circle cx="94" cy="138" r="16" fill="#ec4899" fill-opacity="0.5"/>
+  <rect x="68" y="158" width="52" height="5" rx="2" fill="#ec4899" fill-opacity="0.4"/>
+  <rect x="68" y="168" width="38" height="4" rx="2" fill="#ec4899" fill-opacity="0.3"/>
+  <!-- Frame 2 (active/glowing) -->
+  <rect x="138" y="104" width="84" height="88" rx="4" fill="white" fill-opacity="0.95"/>
+  <rect x="138" y="104" width="84" height="88" rx="4" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+  <circle cx="180" cy="135" r="20" fill="#d946ef" fill-opacity="0.4"/>
+  <polygon points="172,127 172,143 188,135" fill="#d946ef" fill-opacity="0.9"/>
+  <rect x="150" y="162" width="60" height="5" rx="2" fill="#d946ef" fill-opacity="0.4"/>
+  <rect x="155" y="172" width="50" height="4" rx="2" fill="#d946ef" fill-opacity="0.3"/>
+  <!-- Frame 3 -->
+  <rect x="230" y="108" width="76" height="80" rx="4" fill="#f3e8ff"/>
+  <circle cx="268" cy="138" r="16" fill="#a855f7" fill-opacity="0.5"/>
+  <rect x="242" y="158" width="52" height="5" rx="2" fill="#a855f7" fill-opacity="0.4"/>
+  <rect x="242" y="168" width="38" height="4" rx="2" fill="#a855f7" fill-opacity="0.3"/>
+  <!-- Motion arrows -->
+  <text x="114" y="155" font-size="16" fill="white" fill-opacity="0.8">›</text>
+  <text x="207" y="155" font-size="16" fill="white" fill-opacity="0.8">›</text>
+  <!-- Sparkles -->
+  <text x="58" y="72" font-size="18" fill="white" fill-opacity="0.7">✨</text>
+  <text x="310" y="80" font-size="14" fill="white" fill-opacity="0.5">✨</text>
+</svg>

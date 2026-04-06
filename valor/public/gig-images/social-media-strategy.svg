@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="360" cy="260" r="100" fill="rgba(255,255,255,0.07)"/>
+  <circle cx="30" cy="40" r="70" fill="rgba(255,255,255,0.05)"/>
+  <!-- Dashboard card -->
+  <rect x="55" y="45" width="290" height="210" rx="12" fill="white" fill-opacity="0.12"/>
+  <rect x="60" y="50" width="280" height="200" rx="10" fill="white" fill-opacity="0.9"/>
+  <!-- Header -->
+  <rect x="60" y="50" width="280" height="32" rx="10" fill="#f59e0b" fill-opacity="0.15"/>
+  <rect x="60" y="70" width="280" height="12" fill="#f59e0b" fill-opacity="0.15"/>
+  <rect x="72" y="58" width="90" height="8" rx="4" fill="#92400e" fill-opacity="0.5"/>
+  <!-- Stat cards row -->
+  <rect x="70" y="90" width="72" height="42" rx="6" fill="#fef3c7"/>
+  <rect x="72" y="94" width="40" height="6" rx="3" fill="#f59e0b" fill-opacity="0.6"/>
+  <rect x="72" y="106" width="60" height="10" rx="5" fill="#92400e" fill-opacity="0.7"/>
+  <rect x="72" y="120" width="35" height="5" rx="2" fill="#10b981" fill-opacity="0.6"/>
+
+  <rect x="152" y="90" width="72" height="42" rx="6" fill="#dcfce7"/>
+  <rect x="154" y="94" width="40" height="6" rx="3" fill="#10b981" fill-opacity="0.6"/>
+  <rect x="154" y="106" width="60" height="10" rx="5" fill="#065f46" fill-opacity="0.7"/>
+  <rect x="154" y="120" width="35" height="5" rx="2" fill="#10b981" fill-opacity="0.6"/>
+
+  <rect x="234" y="90" width="96" height="42" rx="6" fill="#ede9fe"/>
+  <rect x="236" y="94" width="40" height="6" rx="3" fill="#8b5cf6" fill-opacity="0.6"/>
+  <rect x="236" y="106" width="75" height="10" rx="5" fill="#4c1d95" fill-opacity="0.7"/>
+  <rect x="236" y="120" width="35" height="5" rx="2" fill="#8b5cf6" fill-opacity="0.6"/>
+
+  <!-- Bar chart -->
+  <rect x="70" y="145" width="260" height="90" rx="6" fill="#fef9ee"/>
+  <!-- Chart bars -->
+  <rect x="90" y="185" width="22" height="38" rx="3" fill="#f59e0b" fill-opacity="0.7"/>
+  <rect x="122" y="175" width="22" height="48" rx="3" fill="#f59e0b" fill-opacity="0.85"/>
+  <rect x="154" y="165" width="22" height="58" rx="3" fill="#f97316" fill-opacity="0.8"/>
+  <rect x="186" y="158" width="22" height="65" rx="3" fill="#f97316" fill-opacity="0.9"/>
+  <rect x="218" y="170" width="22" height="53" rx="3" fill="#f59e0b" fill-opacity="0.75"/>
+  <rect x="250" y="160" width="22" height="63" rx="3" fill="#f97316" fill-opacity="0.85"/>
+  <rect x="282" y="148" width="22" height="75" rx="3" fill="#ef4444" fill-opacity="0.8"/>
+  <!-- Chart baseline -->
+  <rect x="80" y="223" width="240" height="2" rx="1" fill="#e5e7eb"/>
+  <!-- Trend line -->
+  <polyline points="101,202 133,192 165,182 197,175 229,186 261,178 293,163" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

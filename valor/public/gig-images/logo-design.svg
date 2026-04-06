@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="50" cy="50" r="80" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="360" cy="260" r="100" fill="rgba(255,255,255,0.05)"/>
+  <!-- Canvas -->
+  <rect x="100" y="55" width="200" height="180" rx="12" fill="white" fill-opacity="0.95"/>
+  <!-- Star logo mark -->
+  <polygon points="200,85 208,108 233,108 213,122 220,146 200,133 180,146 187,122 167,108 192,108" fill="#ec4899"/>
+  <!-- Logo text lines -->
+  <rect x="135" y="158" width="130" height="10" rx="5" fill="#ec4899" fill-opacity="0.3"/>
+  <rect x="155" y="175" width="90" height="8" rx="4" fill="#ec4899" fill-opacity="0.2"/>
+  <!-- Pen tool -->
+  <g transform="rotate(-35, 290, 230)">
+    <rect x="282" y="180" width="16" height="70" rx="8" fill="#1e1b4b"/>
+    <rect x="285" y="185" width="4" height="55" rx="2" fill="rgba(255,255,255,0.2)"/>
+    <polygon points="282,248 298,248 290,272" fill="#6366f1"/>
+    <rect x="282" y="244" width="16" height="6" fill="#4338ca"/>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Decorative blobs -->
+  <circle cx="30" cy="30" r="90" fill="rgba(255,255,255,0.07)"/>
+  <circle cx="370" cy="270" r="110" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="360" cy="40" r="60" fill="rgba(255,255,255,0.05)"/>
+
+  <!-- Palette body -->
+  <ellipse cx="185" cy="158" rx="118" ry="92" fill="white" fill-opacity="0.93"/>
+  <!-- Thumb hole -->
+  <ellipse cx="152" cy="196" rx="24" ry="18" fill="#f43f5e"/>
+
+  <!-- Color dots on palette -->
+  <circle cx="142" cy="120" r="19" fill="#ec4899"/>
+  <circle cx="142" cy="120" r="19" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="187" cy="102" r="19" fill="#f97316"/>
+  <circle cx="187" cy="102" r="19" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="237" cy="107" r="19" fill="#eab308"/>
+  <circle cx="237" cy="107" r="19" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="272" cy="142" r="19" fill="#10b981"/>
+  <circle cx="272" cy="142" r="19" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="274" cy="186" r="19" fill="#3b82f6"/>
+  <circle cx="274" cy="186" r="19" fill="none" stroke="white" stroke-width="2"/>
+
+  <!-- Paintbrush (rotated group) -->
+  <g transform="rotate(-28, 300, 148)">
+    <!-- Handle (wood) -->
+    <rect x="291" y="42" width="18" height="108" rx="9" fill="#92400e"/>
+    <!-- Handle shine -->
+    <rect x="294" y="48" width="5" height="90" rx="2.5" fill="rgba(255,255,255,0.25)"/>
+    <!-- Ferrule (metal band) -->
+    <rect x="290" y="146" width="20" height="18" rx="3" fill="#6b7280"/>
+    <rect x="290" y="146" width="20" height="3" fill="rgba(255,255,255,0.3)"/>
+    <!-- Bristles -->
+    <ellipse cx="300" cy="196" rx="11" ry="30" fill="white" fill-opacity="0.88"/>
+    <!-- Bristle lines -->
+    <line x1="295" y1="166" x2="293" y2="222" stroke="rgba(236,72,153,0.4)" stroke-width="1.5"/>
+    <line x1="300" y1="164" x2="300" y2="224" stroke="rgba(236,72,153,0.4)" stroke-width="1.5"/>
+    <line x1="305" y1="166" x2="307" y2="222" stroke="rgba(236,72,153,0.4)" stroke-width="1.5"/>
+  </g>
+</svg>

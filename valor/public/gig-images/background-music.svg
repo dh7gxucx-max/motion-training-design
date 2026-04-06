@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="50" cy="50" r="80" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="370" cy="260" r="100" fill="rgba(255,255,255,0.05)"/>
+  <!-- Audio waveform bars (centered) -->
+  <rect x="55" y="175" width="14" height="40" rx="7" fill="white" fill-opacity="0.4"/>
+  <rect x="75" y="155" width="14" height="80" rx="7" fill="white" fill-opacity="0.5"/>
+  <rect x="95" y="135" width="14" height="120" rx="7" fill="white" fill-opacity="0.65"/>
+  <rect x="115" y="120" width="14" height="150" rx="7" fill="white" fill-opacity="0.75"/>
+  <rect x="135" y="105" width="14" height="180" rx="7" fill="white" fill-opacity="0.85"/>
+  <rect x="155" y="95" width="14" height="200" rx="7" fill="white" fill-opacity="0.9"/>
+  <rect x="175" y="80" width="14" height="230" rx="7" fill="white"/>
+  <rect x="195" y="95" width="14" height="200" rx="7" fill="white" fill-opacity="0.9"/>
+  <rect x="215" y="108" width="14" height="174" rx="7" fill="white" fill-opacity="0.85"/>
+  <rect x="235" y="122" width="14" height="146" rx="7" fill="white" fill-opacity="0.75"/>
+  <rect x="255" y="140" width="14" height="110" rx="7" fill="white" fill-opacity="0.65"/>
+  <rect x="275" y="158" width="14" height="74" rx="7" fill="white" fill-opacity="0.5"/>
+  <rect x="295" y="174" width="14" height="42" rx="7" fill="white" fill-opacity="0.4"/>
+  <rect x="315" y="185" width="14" height="20" rx="7" fill="white" fill-opacity="0.3"/>
+  <!-- Music note 1 -->
+  <g transform="translate(80,55)">
+    <rect x="0" y="0" width="6" height="30" rx="3" fill="white" fill-opacity="0.8"/>
+    <rect x="0" y="0" width="22" height="6" rx="3" fill="white" fill-opacity="0.8"/>
+    <rect x="16" y="0" width="6" height="24" rx="3" fill="white" fill-opacity="0.8"/>
+    <ellipse cx="3" cy="32" rx="8" ry="5" fill="white" fill-opacity="0.8"/>
+    <ellipse cx="19" cy="26" rx="8" ry="5" fill="white" fill-opacity="0.8"/>
+  </g>
+  <!-- Music note 2 (floating) -->
+  <g transform="translate(290,42) scale(0.7)">
+    <rect x="0" y="0" width="6" height="28" rx="3" fill="white" fill-opacity="0.6"/>
+    <rect x="0" y="0" width="6" height="6" rx="3" fill="white" fill-opacity="0.6"/>
+    <ellipse cx="3" cy="30" rx="8" ry="5" fill="white" fill-opacity="0.6"/>
+  </g>
+  <!-- Playback bar at bottom -->
+  <rect x="60" y="262" width="280" height="20" rx="10" fill="black" fill-opacity="0.2"/>
+  <rect x="68" y="269" width="170" height="6" rx="3" fill="white" fill-opacity="0.6"/>
+  <circle cx="238" cy="272" r="7" fill="white"/>
+  <rect x="245" y="269" width="83" height="6" rx="3" fill="white" fill-opacity="0.2"/>
+</svg>

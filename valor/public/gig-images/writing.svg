@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Decorative blobs -->
+  <circle cx="30" cy="270" r="100" fill="rgba(255,255,255,0.07)"/>
+  <circle cx="370" cy="30" r="80" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- Paper shadow -->
+  <rect x="102" y="34" width="188" height="238" rx="8" fill="rgba(0,0,0,0.12)" transform="rotate(-5, 196, 153)"/>
+  <!-- Paper -->
+  <rect x="98" y="30" width="188" height="238" rx="8" fill="white" fill-opacity="0.94" transform="rotate(-5, 192, 149)"/>
+
+  <!-- Page lines (also rotated -5 deg around center) -->
+  <g transform="rotate(-5, 192, 149)">
+    <!-- Heading line -->
+    <rect x="118" y="58" width="148" height="11" rx="5.5" fill="rgba(16,185,129,0.35)"/>
+    <!-- Text lines -->
+    <rect x="118" y="84" width="148" height="7" rx="3.5" fill="rgba(16,185,129,0.2)"/>
+    <rect x="118" y="100" width="130" height="7" rx="3.5" fill="rgba(16,185,129,0.2)"/>
+    <rect x="118" y="116" width="148" height="7" rx="3.5" fill="rgba(16,185,129,0.2)"/>
+    <rect x="118" y="132" width="110" height="7" rx="3.5" fill="rgba(16,185,129,0.2)"/>
+    <rect x="118" y="155" width="148" height="7" rx="3.5" fill="rgba(16,185,129,0.18)"/>
+    <rect x="118" y="171" width="135" height="7" rx="3.5" fill="rgba(16,185,129,0.18)"/>
+    <rect x="118" y="187" width="148" height="7" rx="3.5" fill="rgba(16,185,129,0.18)"/>
+    <rect x="118" y="203" width="90" height="7" rx="3.5" fill="rgba(16,185,129,0.18)"/>
+    <!-- Horizontal rule -->
+    <line x1="118" y1="144" x2="266" y2="144" stroke="rgba(16,185,129,0.2)" stroke-width="1"/>
+  </g>
+
+  <!-- Pencil (rotated group, upper-right to lower-left) -->
+  <g transform="rotate(-38, 315, 160)">
+    <!-- Eraser (pink top) -->
+    <rect x="307" y="42" width="16" height="16" rx="8" fill="#fca5a5"/>
+    <!-- Eraser band -->
+    <rect x="307" y="56" width="16" height="6" fill="#9ca3af"/>
+    <!-- Handle (yellow body) -->
+    <rect x="307" y="62" width="16" height="120" fill="#fde68a"/>
+    <!-- Handle stripe -->
+    <rect x="310" y="62" width="4" height="120" fill="rgba(0,0,0,0.06)"/>
+    <!-- Tip section (darker yellow) -->
+    <rect x="307" y="178" width="16" height="20" fill="#d97706"/>
+    <!-- Graphite tip -->
+    <polygon points="307,198 323,198 315,222" fill="#374151"/>
+    <!-- Tip shine -->
+    <polygon points="307,198 313,198 309,210" fill="rgba(255,255,255,0.2)"/>
+  </g>
+</svg>

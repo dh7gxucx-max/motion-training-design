@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="40" cy="260" r="90" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="370" cy="40" r="70" fill="rgba(255,255,255,0.05)"/>
+  <!-- Letterhead back -->
+  <rect x="105" y="65" width="155" height="120" rx="6" fill="white" fill-opacity="0.5" transform="rotate(-6,182,125)"/>
+  <!-- Letterhead front -->
+  <rect x="110" y="60" width="155" height="120" rx="6" fill="white" fill-opacity="0.9"/>
+  <rect x="110" y="60" width="155" height="22" rx="6" fill="#d946ef" fill-opacity="0.8"/>
+  <rect x="110" y="74" width="155" height="8" fill="#d946ef" fill-opacity="0.8"/>
+  <rect x="122" y="94" width="80" height="6" rx="3" fill="#d946ef" fill-opacity="0.4"/>
+  <rect x="122" y="106" width="120" height="5" rx="2.5" fill="#6b7280" fill-opacity="0.3"/>
+  <rect x="122" y="116" width="100" height="5" rx="2.5" fill="#6b7280" fill-opacity="0.3"/>
+  <rect x="122" y="126" width="110" height="5" rx="2.5" fill="#6b7280" fill-opacity="0.3"/>
+  <!-- Business card back -->
+  <rect x="215" y="155" width="110" height="68" rx="6" fill="white" fill-opacity="0.5" transform="rotate(8,270,189)"/>
+  <!-- Business card front -->
+  <rect x="210" y="150" width="110" height="68" rx="6" fill="white" fill-opacity="0.95"/>
+  <circle cx="235" cy="172" r="14" fill="#d946ef" fill-opacity="0.8"/>
+  <rect x="255" y="164" width="52" height="6" rx="3" fill="#1f2937" fill-opacity="0.7"/>
+  <rect x="255" y="176" width="38" height="4" rx="2" fill="#6b7280" fill-opacity="0.5"/>
+  <rect x="222" y="196" width="86" height="4" rx="2" fill="#6b7280" fill-opacity="0.3"/>
+  <rect x="222" y="206" width="68" height="4" rx="2" fill="#6b7280" fill-opacity="0.3"/>
+</svg>

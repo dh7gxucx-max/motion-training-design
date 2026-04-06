@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="40" cy="40" r="80" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="370" cy="270" r="90" fill="rgba(255,255,255,0.05)"/>
+  <!-- Mixer/console body -->
+  <rect x="45" y="80" width="310" height="170" rx="12" fill="black" fill-opacity="0.35"/>
+  <rect x="50" y="85" width="300" height="160" rx="10" fill="#1a0533" fill-opacity="0.8"/>
+  <!-- EQ section label -->
+  <rect x="60" y="93" width="60" height="8" rx="4" fill="#d946ef" fill-opacity="0.5"/>
+  <!-- Fader channels (8 channels) -->
+  <!-- Channel 1 -->
+  <rect x="62" y="108" width="26" height="100" rx="4" fill="white" fill-opacity="0.05"/>
+  <rect x="69" y="112" width="12" height="88" rx="3" fill="white" fill-opacity="0.08"/>
+  <rect x="67" y="145" width="16" height="24" rx="4" fill="white" fill-opacity="0.7"/>
+  <rect x="67" y="200" width="16" height="8" rx="3" fill="#d946ef" fill-opacity="0.7"/>
+  <!-- Channel 2 -->
+  <rect x="94" y="108" width="26" height="100" rx="4" fill="white" fill-opacity="0.05"/>
+  <rect x="101" y="112" width="12" height="88" rx="3" fill="white" fill-opacity="0.08"/>
+  <rect x="99" y="130" width="16" height="24" rx="4" fill="white" fill-opacity="0.7"/>
+  <rect x="99" y="200" width="16" height="8" rx="3" fill="#a855f7" fill-opacity="0.7"/>
+  <!-- Channel 3 -->
+  <rect x="126" y="108" width="26" height="100" rx="4" fill="white" fill-opacity="0.05"/>
+  <rect x="133" y="112" width="12" height="88" rx="3" fill="white" fill-opacity="0.08"/>
+  <rect x="131" y="160" width="16" height="24" rx="4" fill="white" fill-opacity="0.7"/>
+  <rect x="131" y="200" width="16" height="8" rx="3" fill="#8b5cf6" fill-opacity="0.7"/>
+  <!-- Channel 4 -->
+  <rect x="158" y="108" width="26" height="100" rx="4" fill="white" fill-opacity="0.05"/>
+  <rect x="165" y="112" width="12" height="88" rx="3" fill="white" fill-opacity="0.08"/>
+  <rect x="163" y="138" width="16" height="24" rx="4" fill="white" fill-opacity="0.7"/>
+  <rect x="163" y="200" width="16" height="8" rx="3" fill="#d946ef" fill-opacity="0.7"/>
+  <!-- Channel 5 -->
+  <rect x="190" y="108" width="26" height="100" rx="4" fill="white" fill-opacity="0.05"/>
+  <rect x="197" y="112" width="12" height="88" rx="3" fill="white" fill-opacity="0.08"/>
+  <rect x="195" y="152" width="16" height="24" rx="4" fill="white" fill-opacity="0.7"/>
+  <rect x="195" y="200" width="16" height="8" rx="3" fill="#ec4899" fill-opacity="0.7"/>
+  <!-- Channel 6 -->
+  <rect x="222" y="108" width="26" height="100" rx="4" fill="white" fill-opacity="0.05"/>
+  <rect x="229" y="112" width="12" height="88" rx="3" fill="white" fill-opacity="0.08"/>
+  <rect x="227" y="126" width="16" height="24" rx="4" fill="white" fill-opacity="0.7"/>
+  <rect x="227" y="200" width="16" height="8" rx="3" fill="#d946ef" fill-opacity="0.7"/>
+  <!-- Master/VU meters right -->
+  <rect x="264" y="108" width="76" height="100" rx="6" fill="black" fill-opacity="0.3"/>
+  <!-- VU meter bars L -->
+  <rect x="272" y="118" width="14" height="8" rx="2" fill="#22c55e" fill-opacity="0.9"/>
+  <rect x="272" y="128" width="14" height="8" rx="2" fill="#22c55e" fill-opacity="0.9"/>
+  <rect x="272" y="138" width="14" height="8" rx="2" fill="#22c55e" fill-opacity="0.9"/>
+  <rect x="272" y="148" width="14" height="8" rx="2" fill="#eab308" fill-opacity="0.9"/>
+  <rect x="272" y="158" width="14" height="8" rx="2" fill="#eab308" fill-opacity="0.9"/>
+  <rect x="272" y="168" width="14" height="8" rx="2" fill="#ef4444" fill-opacity="0.9"/>
+  <rect x="272" y="178" width="14" height="8" rx="2" fill="white" fill-opacity="0.1"/>
+  <rect x="272" y="188" width="14" height="8" rx="2" fill="white" fill-opacity="0.1"/>
+  <!-- VU meter bars R -->
+  <rect x="290" y="118" width="14" height="8" rx="2" fill="#22c55e" fill-opacity="0.9"/>
+  <rect x="290" y="128" width="14" height="8" rx="2" fill="#22c55e" fill-opacity="0.9"/>
+  <rect x="290" y="138" width="14" height="8" rx="2" fill="#22c55e" fill-opacity="0.9"/>
+  <rect x="290" y="148" width="14" height="8" rx="2" fill="#22c55e" fill-opacity="0.9"/>
+  <rect x="290" y="158" width="14" height="8" rx="2" fill="#eab308" fill-opacity="0.9"/>
+  <rect x="290" y="168" width="14" height="8" rx="2" fill="white" fill-opacity="0.1"/>
+  <rect x="290" y="178" width="14" height="8" rx="2" fill="white" fill-opacity="0.1"/>
+  <rect x="290" y="188" width="14" height="8" rx="2" fill="white" fill-opacity="0.1"/>
+  <!-- L R labels -->
+  <text x="276" y="208" font-size="8" fill="white" fill-opacity="0.5" text-anchor="middle">L</text>
+  <text x="297" y="208" font-size="8" fill="white" fill-opacity="0.5" text-anchor="middle">R</text>
+  <!-- Knobs row top -->
+  <circle cx="75" cy="100" r="5" fill="white" fill-opacity="0.3"/>
+  <circle cx="107" cy="100" r="5" fill="white" fill-opacity="0.3"/>
+  <circle cx="139" cy="100" r="5" fill="white" fill-opacity="0.3"/>
+  <circle cx="171" cy="100" r="5" fill="white" fill-opacity="0.3"/>
+  <circle cx="203" cy="100" r="5" fill="white" fill-opacity="0.3"/>
+  <circle cx="235" cy="100" r="5" fill="white" fill-opacity="0.3"/>
+</svg>

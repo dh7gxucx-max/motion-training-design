@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="50" cy="50" r="70" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="360" cy="260" r="90" fill="rgba(255,255,255,0.05)"/>
+  <!-- iOS Phone (left) -->
+  <rect x="50" y="35" width="120" height="230" rx="20" fill="#1e293b" fill-opacity="0.9"/>
+  <rect x="53" y="38" width="114" height="224" rx="18" fill="#0f172a"/>
+  <rect x="88" y="38" width="40" height="10" rx="5" fill="#1e293b"/>
+  <!-- iOS home indicator -->
+  <rect x="93" y="252" width="34" height="4" rx="2" fill="white" fill-opacity="0.4"/>
+  <!-- iOS status bar -->
+  <rect x="60" y="52" width="40" height="6" rx="3" fill="white" fill-opacity="0.4"/>
+  <rect x="143" y="52" width="18" height="6" rx="3" fill="white" fill-opacity="0.4"/>
+  <!-- iOS app content -->
+  <rect x="60" y="68" width="100" height="30" fill="#06b6d4" fill-opacity="0.7"/>
+  <rect x="67" y="76" width="50" height="8" rx="4" fill="white" fill-opacity="0.8"/>
+  <rect x="60" y="102" width="100" height="55" rx="4" fill="white" fill-opacity="0.06"/>
+  <rect x="67" y="110" width="40" height="6" rx="3" fill="white" fill-opacity="0.5"/>
+  <rect x="67" y="121" width="85" height="5" rx="2.5" fill="white" fill-opacity="0.3"/>
+  <rect x="67" y="130" width="70" height="5" rx="2.5" fill="white" fill-opacity="0.3"/>
+  <rect x="67" y="141" width="80" height="5" rx="2.5" fill="white" fill-opacity="0.3"/>
+  <rect x="60" y="162" width="46" height="46" rx="8" fill="#06b6d4" fill-opacity="0.25"/>
+  <rect x="112" y="162" width="46" height="46" rx="8" fill="#14b8a6" fill-opacity="0.25"/>
+  <rect x="60" y="212" width="100" height="28" rx="6" fill="#06b6d4" fill-opacity="0.5"/>
+  <rect x="75" y="222" width="68" height="8" rx="4" fill="white" fill-opacity="0.8"/>
+  <!-- Android Phone (right) -->
+  <rect x="230" y="35" width="120" height="230" rx="16" fill="#1e293b" fill-opacity="0.9"/>
+  <rect x="233" y="38" width="114" height="224" rx="14" fill="#0f172a"/>
+  <!-- Android front camera dot -->
+  <circle cx="290" cy="45" r="5" fill="#1e293b"/>
+  <!-- Android nav bar -->
+  <rect x="233" y="248" width="114" height="14" fill="#0f172a"/>
+  <polygon points="258,254 265,248 272,254" fill="white" fill-opacity="0.35"/>
+  <rect x="284" y="250" width="10" height="6" rx="3" fill="none" stroke="white" stroke-width="1.2" stroke-opacity="0.35"/>
+  <polygon points="310,248 318,255 310,262 310,248" fill="none" stroke="white" stroke-width="1.2" stroke-opacity="0.35"/>
+  <!-- Android app content -->
+  <rect x="240" y="56" width="100" height="32" fill="#06b6d4" fill-opacity="0.7"/>
+  <rect x="247" y="65" width="50" height="8" rx="4" fill="white" fill-opacity="0.8"/>
+  <circle cx="326" cy="70" r="8" fill="white" fill-opacity="0.15"/>
+  <!-- FAB -->
+  <circle cx="316" cy="225" r="16" fill="#06b6d4"/>
+  <text x="316" y="231" text-anchor="middle" font-size="18" fill="white" font-weight="300">+</text>
+  <!-- Material cards -->
+  <rect x="240" y="95" width="100" height="55" rx="6" fill="white" fill-opacity="0.07"/>
+  <rect x="240" y="95" width="100" height="55" rx="6" fill="none" stroke="white" stroke-width="0.5" stroke-opacity="0.2"/>
+  <rect x="247" y="103" width="50" height="7" rx="3.5" fill="white" fill-opacity="0.5"/>
+  <rect x="247" y="115" width="85" height="5" rx="2.5" fill="white" fill-opacity="0.3"/>
+  <rect x="247" y="125" width="70" height="5" rx="2.5" fill="white" fill-opacity="0.3"/>
+  <rect x="247" y="135" width="50" height="5" rx="2.5" fill="white" fill-opacity="0.3"/>
+  <rect x="240" y="156" width="100" height="55" rx="6" fill="white" fill-opacity="0.07"/>
+  <rect x="247" y="164" width="50" height="7" rx="3.5" fill="white" fill-opacity="0.5"/>
+  <rect x="247" y="176" width="85" height="5" rx="2.5" fill="white" fill-opacity="0.3"/>
+  <rect x="247" y="186" width="60" height="5" rx="2.5" fill="white" fill-opacity="0.3"/>
+  <!-- React Native atom between phones -->
+  <g transform="translate(200,150)">
+    <ellipse cx="0" cy="0" rx="20" ry="8" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.6"/>
+    <ellipse cx="0" cy="0" rx="20" ry="8" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.6" transform="rotate(60)"/>
+    <ellipse cx="0" cy="0" rx="20" ry="8" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.6" transform="rotate(120)"/>
+    <circle cx="0" cy="0" r="4" fill="white" fill-opacity="0.9"/>
+  </g>
+</svg>

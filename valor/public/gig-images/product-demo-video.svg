@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="360" cy="270" r="100" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="40" cy="30" r="70" fill="rgba(255,255,255,0.05)"/>
+  <!-- Screen/monitor -->
+  <rect x="75" y="55" width="200" height="150" rx="8" fill="#0f0f23" fill-opacity="0.85"/>
+  <rect x="82" y="62" width="186" height="136" rx="5" fill="#1a1a3e" fill-opacity="0.9"/>
+  <!-- Product on screen -->
+  <rect x="110" y="82" width="130" height="96" rx="4" fill="white" fill-opacity="0.05"/>
+  <circle cx="175" cy="130" r="36" fill="white" fill-opacity="0.08"/>
+  <circle cx="175" cy="130" r="24" fill="#8b5cf6" fill-opacity="0.5"/>
+  <circle cx="175" cy="130" r="14" fill="#8b5cf6" fill-opacity="0.8"/>
+  <!-- Record indicator -->
+  <circle cx="250" cy="72" r="7" fill="#ff0000" fill-opacity="0.9"/>
+  <circle cx="250" cy="72" r="4" fill="#ff6666"/>
+  <!-- Monitor stand -->
+  <rect x="163" y="205" width="24" height="20" rx="2" fill="white" fill-opacity="0.2"/>
+  <rect x="148" y="224" width="54" height="6" rx="3" fill="white" fill-opacity="0.15"/>
+  <!-- Video camera (right side) -->
+  <rect x="290" y="110" width="70" height="50" rx="8" fill="white" fill-opacity="0.15"/>
+  <rect x="296" y="116" width="58" height="38" rx="5" fill="#0f0f23" fill-opacity="0.7"/>
+  <!-- Lens -->
+  <circle cx="318" cy="135" r="14" fill="#1a1a3e"/>
+  <circle cx="318" cy="135" r="9" fill="#2d2d5e"/>
+  <circle cx="318" cy="135" r="5" fill="white" fill-opacity="0.2"/>
+  <circle cx="315" cy="132" r="2" fill="white" fill-opacity="0.5"/>
+  <!-- Record button -->
+  <circle cx="346" cy="135" r="8" fill="#ff0000" fill-opacity="0.8"/>
+  <circle cx="346" cy="135" r="5" fill="#ff4444"/>
+  <!-- Camera top handle -->
+  <rect x="300" y="100" width="40" height="12" rx="4" fill="white" fill-opacity="0.2"/>
+  <!-- Viewfinder -->
+  <rect x="352" y="118" width="5" height="20" rx="2" fill="white" fill-opacity="0.4"/>
+  <!-- Connector arm -->
+  <rect x="276" y="133" width="16" height="4" rx="2" fill="white" fill-opacity="0.3"/>
+  <!-- Sound waves from camera -->
+  <ellipse cx="374" cy="135" rx="4" ry="8" fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.5"/>
+  <ellipse cx="384" cy="135" rx="6" ry="14" fill="none" stroke="white" stroke-width="1.5" stroke-opacity="0.3"/>
+</svg>
