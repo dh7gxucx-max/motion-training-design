@@ -42,7 +42,6 @@ const footerSections = [
     links: [
       { label: "Browse Services", href: "/catalog" },
       { label: "How It Works", href: "/how-it-works" },
-      { label: "Post a Request", href: "/dashboard/client/orders" },
       { label: "Referral Program", href: "/referral" },
     ],
   },
