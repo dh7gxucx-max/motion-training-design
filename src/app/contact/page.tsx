@@ -10,7 +10,7 @@ const contactOptions = [
     icon: MessageSquare,
     title: "General Enquiries",
     desc: "Questions about the platform, features, or pricing.",
-    email: "idealtradingco940@gmail.com",
+    email: "hello@valor.in",
     color: "text-primary bg-primary/10",
   },
   {
@@ -80,7 +80,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-start gap-3 text-text-secondary text-sm">
                   <Mail size={15} className="mt-0.5 shrink-0 text-primary" />
-                  <a href="mailto:idealtradingco940@gmail.com" className="hover:text-primary transition-colors">idealtradingco940@gmail.com</a>
+                  <a href="mailto:hello@valor.in" className="hover:text-primary transition-colors">hello@valor.in</a>
                 </div>
                 <div className="flex items-start gap-3 text-text-secondary text-sm">
                   <MapPin size={15} className="mt-0.5 shrink-0 text-primary" />

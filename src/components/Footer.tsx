@@ -131,7 +131,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-6 text-gray-500 text-sm">
               <span className="flex items-center gap-1">
-                <Mail size={14} /> idealtradingco940@gmail.com
+                <Mail size={14} /> support@valor.in
               </span>
               <span className="flex items-center gap-1">
                 <Phone size={14} /> +91 92344 08700
