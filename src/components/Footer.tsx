@@ -94,10 +94,11 @@ export default function Footer() {
               </div>
               <span className="text-2xl font-bold">VALOR</span>
             </Link>
-            <p className="text-gray-400 text-sm mb-6">
+            <p className="text-gray-400 text-sm mb-3">
               India&apos;s trusted freelance marketplace. Find top talent or
               showcase your skills.
             </p>
+            <p className="text-gray-600 text-xs mb-6">Operated by Zolo Trends</p>
           </AnimatedSection>
 
           {/* Link Columns */}
@@ -123,18 +124,23 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} VALOR. All rights reserved.
-          </p>
-          <div className="flex items-center gap-6 text-gray-500 text-sm">
-            <span className="flex items-center gap-1">
-              <Mail size={14} /> support@valor.in
-            </span>
-            <span className="flex items-center gap-1">
-              <Phone size={14} /> +91 80000 12000
-            </span>
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col gap-3">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-500 text-sm">
+              &copy; {new Date().getFullYear()} VALOR. All rights reserved.
+            </p>
+            <div className="flex items-center gap-6 text-gray-500 text-sm">
+              <span className="flex items-center gap-1">
+                <Mail size={14} /> idealtradingco940@gmail.com
+              </span>
+              <span className="flex items-center gap-1">
+                <Phone size={14} /> +91 92344 08700
+              </span>
+            </div>
           </div>
+          <p className="text-gray-600 text-xs text-center md:text-left">
+            VALOR is operated by <span className="text-gray-500">ZOLO TRENDS PRIVATE LIMITED</span> &nbsp;|&nbsp; CIN: U47820BR2025PTC079961 &nbsp;|&nbsp; GSTIN: 10AACCZ7944H1Z9 &nbsp;|&nbsp; Registered in Bihar, India
+          </p>
         </div>
       </div>
     </footer>

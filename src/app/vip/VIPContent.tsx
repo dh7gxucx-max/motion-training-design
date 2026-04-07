@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import {
@@ -74,6 +75,7 @@ const plans = [
 
 export default function VIPContent() {
   const [annual, setAnnual] = useState(false);
+  const router = useRouter();
 
   return (
     <div>
@@ -195,6 +197,7 @@ export default function VIPContent() {
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
+                      onClick={() => plan.price > 0 && router.push("/auth/register")}
                       className={`w-full py-3.5 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
                         plan.popular
                           ? "bg-primary hover:bg-primary-dark text-white shadow-lg shadow-primary/25"

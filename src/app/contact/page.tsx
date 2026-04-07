@@ -3,14 +3,14 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Mail, Phone, MapPin, Clock, MessageSquare, HelpCircle, AlertCircle } from "lucide-react";
+import { Mail, Phone, MapPin, MessageSquare, HelpCircle, AlertCircle } from "lucide-react";
 
 const contactOptions = [
   {
     icon: MessageSquare,
     title: "General Enquiries",
     desc: "Questions about the platform, features, or pricing.",
-    email: "hello@valor.in",
+    email: "idealtradingco940@gmail.com",
     color: "text-primary bg-primary/10",
   },
   {
@@ -72,20 +72,23 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              <h3 className="font-semibold text-text mb-4">Office Details</h3>
-              <div className="space-y-3">
+              <div className="bg-card rounded-2xl border border-border p-5 space-y-3">
+                <h3 className="font-semibold text-text text-sm">Company Details</h3>
                 <div className="flex items-start gap-3 text-text-secondary text-sm">
-                  <MapPin size={16} className="mt-0.5 shrink-0 text-primary" />
-                  <span>VALOR Technologies Pvt. Ltd.<br />WeWork BKC, Bandra Kurla Complex<br />Mumbai, Maharashtra 400051</span>
+                  <Phone size={15} className="mt-0.5 shrink-0 text-primary" />
+                  <a href="tel:+919234408700" className="hover:text-primary transition-colors">+91 92344 08700</a>
                 </div>
-                <div className="flex items-center gap-3 text-text-secondary text-sm">
-                  <Phone size={16} className="shrink-0 text-primary" />
-                  <span>+91 80000 12000</span>
+                <div className="flex items-start gap-3 text-text-secondary text-sm">
+                  <Mail size={15} className="mt-0.5 shrink-0 text-primary" />
+                  <a href="mailto:idealtradingco940@gmail.com" className="hover:text-primary transition-colors">idealtradingco940@gmail.com</a>
                 </div>
-                <div className="flex items-center gap-3 text-text-secondary text-sm">
-                  <Clock size={16} className="shrink-0 text-primary" />
-                  <span>Mon–Fri, 10:00 AM – 7:00 PM IST</span>
+                <div className="flex items-start gap-3 text-text-secondary text-sm">
+                  <MapPin size={15} className="mt-0.5 shrink-0 text-primary" />
+                  <span>ZOLO TRENDS PRIVATE LIMITED<br />Desri Road, Sadapur Mahua,<br />Vaishali, Bihar – 844122</span>
                 </div>
+                <p className="text-xs text-text-secondary pt-1 border-t border-border">
+                  CIN: U47820BR2025PTC079961 &nbsp;·&nbsp; GSTIN: 10AACCZ7944H1Z9
+                </p>
               </div>
             </div>
 

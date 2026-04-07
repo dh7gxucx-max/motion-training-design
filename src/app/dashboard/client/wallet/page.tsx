@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowDownLeft, ArrowUpRight, Wallet, CreditCard, Smartphone } from "lucide-react";
 
@@ -22,6 +23,7 @@ export default function ClientWalletPage() {
   const [showTopup, setShowTopup] = useState(false);
   const [amount, setAmount] = useState("");
   const [method, setMethod] = useState("upi");
+  const router = useRouter();
 
   return (
     <div className="p-6 sm:p-8 max-w-4xl">
@@ -98,7 +100,7 @@ export default function ClientWalletPage() {
           </div>
           <div className="flex gap-3">
             <button onClick={() => setShowTopup(false)} className="flex-1 py-3 border border-border rounded-xl text-sm font-medium text-text-secondary hover:bg-card transition-all">Cancel</button>
-            <button className="flex-1 py-3 bg-accent hover:bg-accent-dark text-white rounded-xl text-sm font-medium transition-all">
+            <button onClick={() => router.push("/auth/register")} className="flex-1 py-3 bg-accent hover:bg-accent-dark text-white rounded-xl text-sm font-medium transition-all">
               Pay ₹{amount || "0"}
             </button>
           </div>

@@ -42,7 +42,7 @@ export default function AboutPage() {
             <p className="text-blue-200 font-medium mb-4 uppercase tracking-widest text-sm">Our Story</p>
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">Building India's Most Trusted<br />Freelance Marketplace</h1>
             <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-              VALOR was founded in 2023 by a team of engineers and designers who were frustrated with existing platforms that didn't truly serve the Indian market. We set out to build something better.
+              VALOR was founded in 2025 by a team of engineers and designers who were frustrated with existing platforms that didn't truly serve the Indian market. We set out to build something better.
             </p>
           </div>
         </div>
@@ -112,6 +112,31 @@ export default function AboutPage() {
                 <p className="text-text-secondary text-xs mt-1">{member.role}</p>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Legal */}
+        <div className="bg-card border-t border-border py-10">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-lg font-semibold text-text mb-4">Legal Information</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+              <div className="bg-white rounded-xl border border-border p-4">
+                <p className="text-text-secondary text-xs mb-1">Legal Entity</p>
+                <p className="font-medium text-text">ZOLO TRENDS PRIVATE LIMITED</p>
+              </div>
+              <div className="bg-white rounded-xl border border-border p-4">
+                <p className="text-text-secondary text-xs mb-1">CIN</p>
+                <p className="font-medium text-text">U47820BR2025PTC079961</p>
+              </div>
+              <div className="bg-white rounded-xl border border-border p-4">
+                <p className="text-text-secondary text-xs mb-1">GSTIN</p>
+                <p className="font-medium text-text">10AACCZ7944H1Z9</p>
+              </div>
+              <div className="bg-white rounded-xl border border-border p-4">
+                <p className="text-text-secondary text-xs mb-1">Registered Address</p>
+                <p className="font-medium text-text">Desri Road, Sadapur Mahua, Vaishali, Bihar – 844122</p>
+              </div>
+            </div>
           </div>
         </div>
 
