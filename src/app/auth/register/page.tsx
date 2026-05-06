@@ -11,6 +11,7 @@ export default function RegisterPage() {
   const [phone, setPhone] = useState("");
   const [step, setStep] = useState(1);
   const [otp, setOtp] = useState("");
+  const [notifications, setNotifications] = useState(true);
 
   return (
     <div className="min-h-screen flex">
@@ -198,6 +199,18 @@ export default function RegisterPage() {
                   />
                 </div>
               </div>
+
+              <label className="flex items-start gap-3 cursor-pointer select-none">
+                <input
+                  type="checkbox"
+                  checked={notifications}
+                  onChange={(e) => setNotifications(e.target.checked)}
+                  className="mt-0.5 w-4 h-4 rounded border-border accent-primary focus:ring-2 focus:ring-primary/20 cursor-pointer shrink-0"
+                />
+                <span className="text-xs text-text-secondary leading-relaxed">
+                  Yes, I&apos;d like to receive updates, offers and notifications about new gigs, orders and account activity via email and SMS. You can unsubscribe at any time.
+                </span>
+              </label>
 
               <motion.button
                 whileHover={{ scale: 1.01 }}
