@@ -78,7 +78,7 @@ export default function Header() {
               <Gem size={14} className="text-primary" />
               <span className="text-sm font-semibold text-text">1,250</span>
               <span className="text-[10px] font-medium text-text-secondary uppercase tracking-wider">
-                VC
+                RS
               </span>
               <span className="absolute -top-1 -right-1 px-1.5 py-0.5 bg-accent text-white text-[9px] font-bold rounded-full leading-none animate-pulse">
                 +25%

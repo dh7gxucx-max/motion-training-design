@@ -265,7 +265,7 @@ export default function ClientWalletPage() {
                   <span className="font-semibold">
                     ₹{Math.round((amountNum * matchedTier.bonus) / 100).toLocaleString()}
                   </span>{" "}
-                  free credits.
+                  free RS.
                 </p>
               </div>
             )}

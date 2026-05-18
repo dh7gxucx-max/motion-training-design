@@ -17,7 +17,7 @@ import Footer from "@/components/Footer";
 
 type RewardConfig = {
   amount: string;
-  unit: "VC" | "%";
+  unit: "RS" | "%";
   label: string;
   description: string;
 };
@@ -29,7 +29,7 @@ function decodeReward(code: string): RewardConfig {
       amount: "25",
       unit: "%",
       label: "Welcome Bonus",
-      description: "Get +25% extra credits on your very first top-up.",
+      description: "Get +25% extra RS on your very first top-up.",
     };
   }
   if (upper.startsWith("VIP")) {
@@ -43,7 +43,7 @@ function decodeReward(code: string): RewardConfig {
   if (upper.startsWith("WIN")) {
     return {
       amount: "150",
-      unit: "VC",
+      unit: "RS",
       label: "We Miss You Bonus",
       description: "A little something to welcome you back to VALOR.",
     };
@@ -51,14 +51,14 @@ function decodeReward(code: string): RewardConfig {
   if (upper.startsWith("TOP")) {
     return {
       amount: "200",
-      unit: "VC",
+      unit: "RS",
       label: "Top-up Reward",
       description: "A free credit boost — no top-up required.",
     };
   }
   return {
     amount: "150",
-    unit: "VC",
+    unit: "RS",
     label: "Surprise Reward",
     description: "Your personalised reward is ready to be claimed.",
   };
@@ -186,7 +186,7 @@ export default function ClaimPage({
               {/* Benefits */}
               <div className="space-y-3 mb-8">
                 {[
-                  "Credited instantly to your Valor wallet",
+                  "RS credited instantly to your Valor wallet",
                   "Use on any service in the catalog",
                   "Stacks with other active bonuses",
                 ].map((item) => (

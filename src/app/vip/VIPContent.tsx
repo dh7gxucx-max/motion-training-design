@@ -308,12 +308,12 @@ export default function VIPContent() {
                   {
                     icon: Gem,
                     title: "Top up your wallet",
-                    desc: "Add credits and earn an instant bonus based on your tier.",
+                    desc: "Add funds and earn an instant RS bonus based on your tier.",
                   },
                   {
                     icon: Sparkles,
-                    title: "Use credits on any gig",
-                    desc: "Spend at checkout — your credits stack with active bonuses.",
+                    title: "Use RS on any gig",
+                    desc: "Spend at checkout — your RS stack with active bonuses.",
                   },
                   {
                     icon: Crown,
