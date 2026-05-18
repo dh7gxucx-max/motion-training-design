@@ -46,12 +46,12 @@ const footerSections = [
     ],
   },
   {
-    title: "For Freelancers",
+    title: "Rewards",
     links: [
-      { label: "Become a Seller", href: "/auth/register" },
-      { label: "VIP Plans", href: "/vip" },
-      { label: "Seller Guide", href: "/how-it-works" },
-      { label: "Referral Program", href: "/referral" },
+      { label: "Welcome Bonus", href: "/claim/WB25" },
+      { label: "Top-up & Save", href: "/dashboard/client/wallet" },
+      { label: "VIP Club", href: "/vip" },
+      { label: "Refer & Earn", href: "/referral" },
     ],
   },
   {

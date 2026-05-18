@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Phone, ArrowRight, User, Briefcase } from "lucide-react";
+import { Phone, ArrowRight, User, Briefcase, Gift } from "lucide-react";
 
 export default function RegisterPage() {
   const [role, setRole] = useState<"client" | "freelancer">("client");
@@ -91,6 +91,30 @@ export default function RegisterPage() {
               </Link>
             </p>
           </div>
+
+          {/* Welcome bonus banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-accent/10 via-accent/5 to-primary/10 border border-accent/20 p-4 mb-6"
+          >
+            <div className="absolute -right-4 -top-4 w-20 h-20 bg-accent/20 rounded-full blur-2xl" />
+            <div className="relative flex items-center gap-3">
+              <div className="w-11 h-11 shrink-0 rounded-xl bg-gradient-to-br from-accent to-accent-dark text-white flex items-center justify-center shadow-lg shadow-accent/30">
+                <Gift size={20} />
+              </div>
+              <div className="flex-1">
+                <p className="text-sm font-semibold text-text leading-tight">
+                  Sign up & unlock{" "}
+                  <span className="text-accent">+25% welcome bonus</span>
+                </p>
+                <p className="text-xs text-text-secondary mt-0.5">
+                  Applied automatically on your first top-up.
+                </p>
+              </div>
+            </div>
+          </motion.div>
 
           {/* Steps indicator */}
           <div className="flex items-center gap-3 mb-8">

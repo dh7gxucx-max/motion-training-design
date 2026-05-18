@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Search, ArrowRight, Star, Users, Briefcase } from "lucide-react";
+import { Search, Star, Users, Briefcase, Gift } from "lucide-react";
 import { useState } from "react";
 
 const popularSearches = [
@@ -220,6 +220,29 @@ export default function HeroSection() {
                     <p className="font-bold text-text">12,800+</p>
                   </div>
                 </div>
+              </motion.div>
+
+              {/* Welcome bonus badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.6, rotate: -8 }}
+                animate={{ opacity: 1, scale: 1, rotate: -6 }}
+                transition={{ duration: 0.6, delay: 1.1, type: "spring" }}
+                className="absolute bottom-0 right-0 animate-pulse-glow"
+              >
+                <Link
+                  href="/claim/WB25"
+                  className="block bg-gradient-to-br from-accent to-accent-dark text-white rounded-2xl p-4 shadow-xl hover:shadow-2xl transition-all hover:scale-105"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur flex items-center justify-center">
+                      <Gift size={20} />
+                    </div>
+                    <div>
+                      <p className="text-xs opacity-90">Welcome bonus</p>
+                      <p className="font-bold text-2xl leading-none">+25%</p>
+                    </div>
+                  </div>
+                </Link>
               </motion.div>
             </div>
           </div>

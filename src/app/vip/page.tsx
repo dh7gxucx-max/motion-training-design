@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 
 export const metadata: Metadata = {
-  title: "VIP Plans — Grow Your Freelance Business | VALOR",
-  description: "Unlock featured placements, lower commission, and priority support with VALOR VIP plans. Starting at ₹999/month.",
+  title: "Rewards & VIP Club | VALOR",
+  description: "Earn bonuses on every top-up, unlock VIP tiers, claim exclusive rewards and grow your freelance business on VALOR.",
   openGraph: {
-    title: "VALOR VIP Plans",
-    description: "Silver, Gold & Platinum plans to supercharge your freelancing on VALOR.",
+    title: "VALOR Rewards & VIP Club",
+    description: "Bronze, Silver, Gold and Platinum loyalty tiers with exclusive top-up bonuses and seller plans.",
     type: "website",
   },
 };

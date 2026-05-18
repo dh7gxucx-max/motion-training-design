@@ -1,8 +1,9 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ShoppingBag, Star, Wallet, Bell, ArrowRight, Clock, Search } from "lucide-react";
+import { ShoppingBag, Star, Wallet, Bell, ArrowRight, Clock, Search, Gift } from "lucide-react";
 
 const stats = [
   { label: "Active Orders", value: "3", sub: "2 awaiting delivery", icon: ShoppingBag, color: "bg-primary/10 text-primary" },
@@ -28,9 +29,53 @@ const statusStyle: Record<string, string> = {
   Completed: "bg-success/10 text-success",
 };
 
+function useBonusCountdown(seconds: number) {
+  const [left, setLeft] = useState(seconds);
+  useEffect(() => {
+    const id = setInterval(() => setLeft((s) => (s > 0 ? s - 1 : 0)), 1000);
+    return () => clearInterval(id);
+  }, []);
+  const hh = String(Math.floor(left / 3600)).padStart(2, "0");
+  const mm = String(Math.floor((left % 3600) / 60)).padStart(2, "0");
+  const ss = String(left % 60).padStart(2, "0");
+  return `${hh}:${mm}:${ss}`;
+}
+
 export default function ClientOverviewPage() {
+  const bonusTimer = useBonusCountdown(48000);
   return (
     <div className="p-6 sm:p-8 max-w-7xl">
+      {/* Active bonus promo strip */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="relative overflow-hidden rounded-2xl p-5 mb-6 bg-gradient-to-r from-accent via-accent-dark to-primary text-white shadow-lg shadow-accent/20"
+      >
+        <div className="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+        <div className="absolute -left-8 -bottom-8 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+        <div className="relative flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur flex items-center justify-center shrink-0">
+            <Gift size={22} />
+          </div>
+          <div className="flex-1">
+            <p className="font-semibold">
+              Your +25% top-up bonus is active
+            </p>
+            <p className="text-sm text-white/80">
+              Expires in{" "}
+              <span className="font-mono font-semibold">{bonusTimer}</span> · top
+              up now to lock in the boost.
+            </p>
+          </div>
+          <Link
+            href="/dashboard/client/wallet"
+            className="px-4 py-2 bg-white text-accent rounded-xl text-sm font-semibold hover:bg-white/90 transition-all shrink-0"
+          >
+            Top up now
+          </Link>
+        </div>
+      </motion.div>
+
       <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center justify-between mb-8">
         <div>
           <h1 className="text-2xl font-bold text-text">Good morning, Arjun!</h1>

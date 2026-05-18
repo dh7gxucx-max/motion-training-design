@@ -1,12 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { ArrowDownLeft, ArrowUpRight, Wallet, CreditCard, Smartphone } from "lucide-react";
+import {
+  ArrowDownLeft,
+  ArrowUpRight,
+  Wallet,
+  CreditCard,
+  Smartphone,
+  Gift,
+  Sparkles,
+  Clock,
+  TrendingUp,
+} from "lucide-react";
 
 const transactions = [
   { type: "debit", desc: "Order #1042 – Logo Design Premium", amount: "-₹3,500", date: "Mar 28" },
+  { type: "credit", desc: "Welcome Bonus +25%", amount: "+₹5,000", date: "Mar 25" },
   { type: "debit", desc: "Order #1038 – Website Development", amount: "-₹15,000", date: "Mar 22" },
   { type: "credit", desc: "Wallet Top-up via UPI", amount: "+₹20,000", date: "Mar 20" },
   { type: "credit", desc: "Referral Bonus – Invited Meera K.", amount: "+₹100", date: "Mar 15" },
@@ -19,11 +30,84 @@ const paymentMethods = [
   { type: "Card", label: "Visa ••••3456", icon: CreditCard, primary: false },
 ];
 
+const topupTiers = [
+  { amount: 500, bonus: 15, label: "Starter" },
+  { amount: 1000, bonus: 20, label: "Saver" },
+  { amount: 2000, bonus: 25, label: "Smart", popular: true },
+  { amount: 5000, bonus: 30, label: "Pro" },
+];
+
+const activeBonuses = [
+  {
+    title: "Welcome Bonus",
+    perc: "+25%",
+    desc: "On your next top-up",
+    expiresInSec: 86400,
+    tone: "accent" as const,
+  },
+  {
+    title: "VIP Boost",
+    perc: "+15%",
+    desc: "Reserved for VIP members",
+    expiresInSec: 172800,
+    tone: "primary" as const,
+  },
+];
+
+function useCountdown(seconds: number) {
+  const [left, setLeft] = useState(seconds);
+  useEffect(() => {
+    const id = setInterval(() => setLeft((s) => (s > 0 ? s - 1 : 0)), 1000);
+    return () => clearInterval(id);
+  }, []);
+  const hh = String(Math.floor(left / 3600)).padStart(2, "0");
+  const mm = String(Math.floor((left % 3600) / 60)).padStart(2, "0");
+  const ss = String(left % 60).padStart(2, "0");
+  return `${hh}:${mm}:${ss}`;
+}
+
+function BonusCard({
+  bonus,
+}: {
+  bonus: (typeof activeBonuses)[number];
+}) {
+  const timer = useCountdown(bonus.expiresInSec);
+  const gradient =
+    bonus.tone === "accent"
+      ? "from-accent to-accent-dark"
+      : "from-primary to-primary-light";
+  return (
+    <div
+      className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${gradient} text-white p-5`}
+    >
+      <div className="absolute -right-4 -top-4 w-20 h-20 bg-white/10 rounded-full blur-xl" />
+      <div className="relative">
+        <div className="flex items-center gap-2 mb-3">
+          <Sparkles size={14} className="opacity-80" />
+          <span className="text-xs uppercase tracking-wider opacity-90">
+            {bonus.title}
+          </span>
+        </div>
+        <p className="text-3xl font-bold leading-none mb-1">{bonus.perc}</p>
+        <p className="text-xs opacity-80 mb-3">{bonus.desc}</p>
+        <div className="flex items-center gap-1.5 text-xs">
+          <Clock size={12} />
+          <span className="font-mono font-semibold">{timer}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function ClientWalletPage() {
   const [showTopup, setShowTopup] = useState(false);
   const [amount, setAmount] = useState("");
   const [method, setMethod] = useState("upi");
   const router = useRouter();
+
+  const amountNum = parseInt(amount || "0", 10);
+  const matchedTier =
+    [...topupTiers].reverse().find((t) => amountNum >= t.amount) ?? null;
 
   return (
     <div className="p-6 sm:p-8 max-w-4xl">
@@ -71,6 +155,78 @@ export default function ClientWalletPage() {
         </motion.div>
       </div>
 
+      {/* Active Bonuses */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.18 }}
+        className="mb-6"
+      >
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="font-semibold text-text flex items-center gap-2">
+            <Sparkles size={16} className="text-accent" /> Active Bonuses
+          </h2>
+          <span className="text-xs text-text-secondary">
+            {activeBonuses.length} active
+          </span>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-3">
+          {activeBonuses.map((b) => (
+            <BonusCard key={b.title} bonus={b} />
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Top-up Tiers */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.22 }}
+        className="bg-white rounded-2xl border border-border p-6 mb-6"
+      >
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="font-semibold text-text flex items-center gap-2">
+            <TrendingUp size={16} className="text-primary" /> Top up & save
+          </h2>
+          <span className="text-xs text-text-secondary">
+            Bigger top-ups, bigger bonuses
+          </span>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+          {topupTiers.map((tier) => (
+            <button
+              key={tier.amount}
+              onClick={() => {
+                setAmount(String(tier.amount));
+                setShowTopup(true);
+              }}
+              className={`relative p-4 rounded-xl border-2 text-left transition-all hover:-translate-y-1 hover:shadow-md ${
+                tier.popular
+                  ? "border-accent bg-accent/5"
+                  : "border-border hover:border-primary/40"
+              }`}
+            >
+              {tier.popular && (
+                <span className="absolute -top-2 left-3 px-2 py-0.5 bg-accent text-white text-[10px] font-bold rounded-full">
+                  POPULAR
+                </span>
+              )}
+              <p className="text-xs text-text-secondary mb-1">{tier.label}</p>
+              <p className="text-lg font-bold text-text">₹{tier.amount.toLocaleString()}</p>
+              <div
+                className={`inline-flex items-center gap-1 mt-2 px-2 py-0.5 rounded-full text-xs font-bold ${
+                  tier.popular
+                    ? "bg-accent text-white"
+                    : "bg-success/10 text-success"
+                }`}
+              >
+                +{tier.bonus}%
+              </div>
+            </button>
+          ))}
+        </div>
+      </motion.div>
+
       {/* Top-up Form */}
       {showTopup && (
         <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }}
@@ -97,6 +253,22 @@ export default function ClientWalletPage() {
                 </button>
               ))}
             </div>
+            {matchedTier && (
+              <div className="flex items-center gap-2 mt-3 p-2.5 bg-success/5 border border-success/20 rounded-lg">
+                <Gift size={14} className="text-success shrink-0" />
+                <p className="text-xs text-text">
+                  You unlock a{" "}
+                  <span className="font-semibold text-success">
+                    +{matchedTier.bonus}% bonus
+                  </span>{" "}
+                  — adds{" "}
+                  <span className="font-semibold">
+                    ₹{Math.round((amountNum * matchedTier.bonus) / 100).toLocaleString()}
+                  </span>{" "}
+                  free credits.
+                </p>
+              </div>
+            )}
           </div>
           <div className="flex gap-3">
             <button onClick={() => setShowTopup(false)} className="flex-1 py-3 border border-border rounded-xl text-sm font-medium text-text-secondary hover:bg-card transition-all">Cancel</button>

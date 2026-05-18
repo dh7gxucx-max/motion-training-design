@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Copy, Check, Users, IndianRupee, Gift, ArrowRight, Star, TrendingUp, Share2 } from "lucide-react";
+import { Copy, Check, Users, IndianRupee, Gift, ArrowRight, TrendingUp, Share2, Target } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const steps = [
@@ -151,6 +151,67 @@ export default function ReferralContent() {
               Sign in to get your personal referral link and start tracking earnings.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Your Progress */}
+      <section className="py-12 bg-white border-y border-border">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimatedSection direction="up">
+            <div className="bg-gradient-to-br from-primary/5 via-white to-accent/5 border border-border rounded-3xl p-6 sm:p-8 shadow-lg shadow-primary/5">
+              <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white">
+                    <Target size={20} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-text-secondary uppercase tracking-wider">
+                      Your progress
+                    </p>
+                    <p className="font-semibold text-text">
+                      You&apos;re a{" "}
+                      <span className="text-primary">Starter</span> referrer
+                    </p>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <p className="text-2xl font-bold gradient-text">₹600</p>
+                  <p className="text-xs text-text-secondary">earned so far</p>
+                </div>
+              </div>
+
+              <div className="mb-2 flex items-center justify-between text-sm">
+                <span className="text-text font-medium">3 referrals</span>
+                <span className="text-text-secondary">
+                  3 more to unlock <span className="font-semibold text-primary">Silver</span>
+                </span>
+              </div>
+              <div className="h-3 bg-card rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  whileInView={{ width: "50%" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.2, ease: "easeOut" }}
+                  className="h-full bg-gradient-to-r from-primary to-accent rounded-full"
+                />
+              </div>
+
+              <div className="grid grid-cols-3 gap-3 mt-5">
+                <div className="text-center p-3 bg-white rounded-xl border border-border">
+                  <p className="text-xs text-text-secondary">Pending</p>
+                  <p className="font-bold text-text">₹400</p>
+                </div>
+                <div className="text-center p-3 bg-white rounded-xl border border-border">
+                  <p className="text-xs text-text-secondary">Available</p>
+                  <p className="font-bold text-success">₹600</p>
+                </div>
+                <div className="text-center p-3 bg-white rounded-xl border border-border">
+                  <p className="text-xs text-text-secondary">Lifetime</p>
+                  <p className="font-bold text-text">₹1,000</p>
+                </div>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

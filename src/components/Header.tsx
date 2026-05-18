@@ -3,12 +3,12 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Search, ChevronDown } from "lucide-react";
+import { Menu, X, Search, Gem } from "lucide-react";
 
 const navLinks = [
   { href: "/catalog", label: "Services" },
   { href: "/how-it-works", label: "How It Works" },
-  { href: "/vip", label: "VIP" },
+  { href: "/vip", label: "Rewards" },
 ];
 
 export default function Header() {
@@ -27,7 +27,8 @@ export default function Header() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        style={{ top: "var(--promo-h, 0px)" }}
+        className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
             ? "glass shadow-lg py-3"
             : "bg-transparent py-5"
@@ -62,7 +63,7 @@ export default function Header() {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3">
             <Link
               href="/catalog"
               className="flex items-center gap-2 px-4 py-2 rounded-xl bg-card hover:bg-border text-text-secondary hover:text-text transition-all"
@@ -71,8 +72,21 @@ export default function Header() {
               <span className="text-sm">Search services...</span>
             </Link>
             <Link
+              href="/dashboard/client/wallet"
+              className="group relative flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-primary/10 to-accent/10 hover:from-primary/20 hover:to-accent/20 transition-all"
+            >
+              <Gem size={14} className="text-primary" />
+              <span className="text-sm font-semibold text-text">1,250</span>
+              <span className="text-[10px] font-medium text-text-secondary uppercase tracking-wider">
+                VC
+              </span>
+              <span className="absolute -top-1 -right-1 px-1.5 py-0.5 bg-accent text-white text-[9px] font-bold rounded-full leading-none animate-pulse">
+                +25%
+              </span>
+            </Link>
+            <Link
               href="/auth/login"
-              className="px-5 py-2.5 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
+              className="px-4 py-2.5 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
             >
               Sign In
             </Link>
