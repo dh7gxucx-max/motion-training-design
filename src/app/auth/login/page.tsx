@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Phone, Mail, ArrowRight, Eye, EyeOff } from "lucide-react";
+import { signIn } from "@/lib/auth";
 
-export default function LoginPage() {
+function LoginContent() {
   const [method, setMethod] = useState<"phone" | "email">("phone");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
@@ -13,6 +15,22 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [otpSent, setOtpSent] = useState(false);
   const [otp, setOtp] = useState("");
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const next = searchParams.get("next") || "/dashboard/client";
+
+  const handleSignIn = () => {
+    signIn({ userId: "demo-user", name: "Arjun", role: "client" });
+    router.push(next);
+  };
+
+  const handlePhoneSubmit = () => {
+    if (!otpSent) {
+      setOtpSent(true);
+      return;
+    }
+    handleSignIn();
+  };
 
   return (
     <div className="min-h-screen flex">
@@ -75,7 +93,7 @@ export default function LoginPage() {
             <p className="text-text-secondary">
               Don&apos;t have an account?{" "}
               <Link
-                href="/auth/register"
+                href={`/auth/register${next !== "/dashboard/client" ? `?next=${encodeURIComponent(next)}` : ""}`}
                 className="text-primary font-medium hover:text-primary-dark"
               >
                 Sign Up
@@ -151,7 +169,7 @@ export default function LoginPage() {
               <motion.button
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
-                onClick={() => setOtpSent(true)}
+                onClick={handlePhoneSubmit}
                 className="w-full py-3.5 bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl transition-all shadow-lg shadow-accent/25 flex items-center justify-center gap-2"
               >
                 {otpSent ? "Verify OTP" : "Send OTP"}
@@ -203,6 +221,7 @@ export default function LoginPage() {
               <motion.button
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
+                onClick={handleSignIn}
                 className="w-full py-3.5 bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl transition-all shadow-lg shadow-accent/25 flex items-center justify-center gap-2"
               >
                 Sign In
@@ -224,5 +243,13 @@ export default function LoginPage() {
         </motion.div>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={null}>
+      <LoginContent />
+    </Suspense>
   );
 }

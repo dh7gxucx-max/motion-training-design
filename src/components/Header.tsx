@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Search, Gem } from "lucide-react";
+import { Menu, X, Search, Gem, LayoutDashboard, LogOut } from "lucide-react";
+import { useSession, signOut } from "@/lib/auth";
 
 const navLinks = [
   { href: "/catalog", label: "Services" },
@@ -14,12 +16,24 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { session, isAuthed } = useSession();
+  const router = useRouter();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const handleSignOut = () => {
+    signOut();
+    router.push("/");
+  };
+
+  const dashboardHref =
+    session?.role === "freelancer"
+      ? "/dashboard/freelancer"
+      : "/dashboard/client";
 
   return (
     <>
@@ -71,31 +85,57 @@ export default function Header() {
               <Search size={16} />
               <span className="text-sm">Search services...</span>
             </Link>
-            <Link
-              href="/dashboard/client/wallet"
-              className="group relative flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-primary/10 to-accent/10 hover:from-primary/20 hover:to-accent/20 transition-all"
-            >
-              <Gem size={14} className="text-primary" />
-              <span className="text-sm font-semibold text-text">1,250</span>
-              <span className="text-[10px] font-medium text-text-secondary uppercase tracking-wider">
-                RS
-              </span>
-              <span className="absolute -top-1 -right-1 px-1.5 py-0.5 bg-accent text-white text-[9px] font-bold rounded-full leading-none animate-pulse">
-                +25%
-              </span>
-            </Link>
-            <Link
-              href="/auth/login"
-              className="px-4 py-2.5 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
-            >
-              Sign In
-            </Link>
-            <Link
-              href="/auth/register"
-              className="px-5 py-2.5 text-sm font-medium text-white bg-accent hover:bg-accent-dark rounded-xl transition-all hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5"
-            >
-              Get Started
-            </Link>
+
+            {isAuthed && (
+              <Link
+                href="/dashboard/client/wallet"
+                className="group relative flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-primary/10 to-accent/10 hover:from-primary/20 hover:to-accent/20 transition-all"
+              >
+                <Gem size={14} className="text-primary" />
+                <span className="text-sm font-semibold text-text">1,250</span>
+                <span className="text-[10px] font-medium text-text-secondary uppercase tracking-wider">
+                  RS
+                </span>
+                <span className="absolute -top-1 -right-1 px-1.5 py-0.5 bg-accent text-white text-[9px] font-bold rounded-full leading-none animate-pulse">
+                  +25%
+                </span>
+              </Link>
+            )}
+
+            {isAuthed ? (
+              <>
+                <Link
+                  href={dashboardHref}
+                  className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
+                >
+                  <LayoutDashboard size={16} />
+                  Dashboard
+                </Link>
+                <button
+                  onClick={handleSignOut}
+                  className="flex items-center gap-1.5 px-4 py-2.5 text-sm font-medium text-text-secondary hover:text-text transition-colors"
+                  aria-label="Sign out"
+                >
+                  <LogOut size={16} />
+                  Sign out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link
+                  href="/auth/login"
+                  className="px-4 py-2.5 text-sm font-medium text-primary hover:text-primary-dark transition-colors"
+                >
+                  Sign In
+                </Link>
+                <Link
+                  href="/auth/register"
+                  className="px-5 py-2.5 text-sm font-medium text-white bg-accent hover:bg-accent-dark rounded-xl transition-all hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5"
+                >
+                  Get Started
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Burger */}
@@ -136,20 +176,43 @@ export default function Header() {
                 </motion.div>
               ))}
               <div className="flex flex-col gap-3 mt-6">
-                <Link
-                  href="/auth/login"
-                  onClick={() => setMobileOpen(false)}
-                  className="text-center px-5 py-3 text-primary font-medium border border-primary rounded-xl hover:bg-primary hover:text-white transition-all"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/auth/register"
-                  onClick={() => setMobileOpen(false)}
-                  className="text-center px-5 py-3 text-white font-medium bg-accent rounded-xl hover:bg-accent-dark transition-all"
-                >
-                  Get Started
-                </Link>
+                {isAuthed ? (
+                  <>
+                    <Link
+                      href={dashboardHref}
+                      onClick={() => setMobileOpen(false)}
+                      className="text-center px-5 py-3 text-primary font-medium border border-primary rounded-xl hover:bg-primary hover:text-white transition-all"
+                    >
+                      Dashboard
+                    </Link>
+                    <button
+                      onClick={() => {
+                        setMobileOpen(false);
+                        handleSignOut();
+                      }}
+                      className="text-center px-5 py-3 text-text font-medium bg-card rounded-xl hover:bg-border transition-all"
+                    >
+                      Sign out
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      href="/auth/login"
+                      onClick={() => setMobileOpen(false)}
+                      className="text-center px-5 py-3 text-primary font-medium border border-primary rounded-xl hover:bg-primary hover:text-white transition-all"
+                    >
+                      Sign In
+                    </Link>
+                    <Link
+                      href="/auth/register"
+                      onClick={() => setMobileOpen(false)}
+                      className="text-center px-5 py-3 text-white font-medium bg-accent rounded-xl hover:bg-accent-dark transition-all"
+                    >
+                      Get Started
+                    </Link>
+                  </>
+                )}
               </div>
             </nav>
           </motion.div>

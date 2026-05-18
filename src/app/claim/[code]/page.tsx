@@ -2,6 +2,7 @@
 
 import { use, useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Gift,
@@ -11,9 +12,11 @@ import {
   Clock,
   ArrowRight,
   Shield,
+  Lock,
 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useSession } from "@/lib/auth";
 
 type RewardConfig = {
   amount: string;
@@ -85,6 +88,19 @@ export default function ClaimPage({
   const reward = decodeReward(code);
   const timer = useCountdown(86400);
   const [claimed, setClaimed] = useState(false);
+  const router = useRouter();
+  const { isAuthed, ready } = useSession();
+
+  const handleClaim = () => {
+    if (!ready) return;
+    if (!isAuthed) {
+      router.push(
+        `/auth/register?next=${encodeURIComponent(`/claim/${code}`)}`
+      );
+      return;
+    }
+    setClaimed(true);
+  };
 
   return (
     <>
@@ -208,11 +224,18 @@ export default function ClaimPage({
                     exit={{ opacity: 0, scale: 0.95 }}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    onClick={() => setClaimed(true)}
+                    onClick={handleClaim}
                     className="w-full py-4 bg-accent hover:bg-accent-dark text-white text-base font-semibold rounded-xl transition-all shadow-lg shadow-accent/25 flex items-center justify-center gap-2"
                   >
-                    Claim Now
-                    <ArrowRight size={18} />
+                    {ready && !isAuthed ? (
+                      <>
+                        <Lock size={16} /> Sign up to claim
+                      </>
+                    ) : (
+                      <>
+                        Claim Now <ArrowRight size={18} />
+                      </>
+                    )}
                   </motion.button>
                 ) : (
                   <motion.div
@@ -248,16 +271,18 @@ export default function ClaimPage({
           </motion.div>
 
           {/* Bottom links */}
-          <div className="text-center mt-6 text-sm text-text-secondary">
-            New to VALOR?{" "}
-            <Link
-              href="/auth/register"
-              className="text-primary font-medium hover:text-primary-dark"
-            >
-              Create an account
-            </Link>{" "}
-            to lock in your reward.
-          </div>
+          {ready && !isAuthed && (
+            <div className="text-center mt-6 text-sm text-text-secondary">
+              New to VALOR?{" "}
+              <Link
+                href={`/auth/register?next=${encodeURIComponent(`/claim/${code}`)}`}
+                className="text-primary font-medium hover:text-primary-dark"
+              >
+                Create an account
+              </Link>{" "}
+              to lock in your reward.
+            </div>
+          )}
         </div>
       </main>
       <Footer />

@@ -1,17 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Phone, ArrowRight, User, Briefcase, Gift } from "lucide-react";
+import { signIn } from "@/lib/auth";
 
-export default function RegisterPage() {
+function RegisterContent() {
   const [role, setRole] = useState<"client" | "freelancer">("client");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [step, setStep] = useState(1);
   const [otp, setOtp] = useState("");
   const [notifications, setNotifications] = useState(true);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const next = searchParams.get("next") || "/dashboard/client";
+
+  const handleCreateAccount = () => {
+    signIn({
+      userId: "demo-user",
+      name: name || "Arjun",
+      role,
+    });
+    router.push(next);
+  };
 
   return (
     <div className="min-h-screen flex">
@@ -274,6 +288,7 @@ export default function RegisterPage() {
               <motion.button
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.99 }}
+                onClick={handleCreateAccount}
                 className="w-full py-3.5 bg-accent hover:bg-accent-dark text-white font-semibold rounded-xl transition-all shadow-lg shadow-accent/25 flex items-center justify-center gap-2"
               >
                 Create Account
@@ -308,5 +323,13 @@ export default function RegisterPage() {
         </motion.div>
       </div>
     </div>
+  );
+}
+
+export default function RegisterPage() {
+  return (
+    <Suspense fallback={null}>
+      <RegisterContent />
+    </Suspense>
   );
 }
